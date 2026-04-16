@@ -45,14 +45,17 @@ export default function Process() {
       const { ScrollTrigger } = await import('gsap/ScrollTrigger')
       gsap.registerPlugin(ScrollTrigger)
 
-      gsap.fromTo(
-        sectionRef.current?.querySelector('.process-header'),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
-        }
-      )
+      const processHeader = sectionRef.current?.querySelector('.process-header')
+      if (processHeader) {
+        gsap.fromTo(
+          processHeader,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
+          }
+        )
+      }
 
       const cards = sectionRef.current?.querySelectorAll('.process-card')
       if (cards) {

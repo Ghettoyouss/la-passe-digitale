@@ -30,16 +30,20 @@ export default function ContactPage() {
     const initGsap = async () => {
       const { gsap } = await import('gsap')
 
-      gsap.fromTo(
-        headerRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 }
-      )
-      gsap.fromTo(
-        formRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.25 }
-      )
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 }
+        )
+      }
+      if (formRef.current) {
+        gsap.fromTo(
+          formRef.current,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.25 }
+        )
+      }
     }
     initGsap()
   }, [])

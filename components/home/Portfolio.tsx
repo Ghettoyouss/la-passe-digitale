@@ -57,14 +57,17 @@ export default function Portfolio() {
       const { ScrollTrigger } = await import('gsap/ScrollTrigger')
       gsap.registerPlugin(ScrollTrigger)
 
-      gsap.fromTo(
-        sectionRef.current?.querySelector('.portfolio-header'),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
-        }
-      )
+      const portfolioHeader = sectionRef.current?.querySelector('.portfolio-header')
+      if (portfolioHeader) {
+        gsap.fromTo(
+          portfolioHeader,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
+          }
+        )
+      }
 
       const cards = sectionRef.current?.querySelectorAll('.portfolio-card')
       if (cards) {

@@ -24,11 +24,14 @@ export default function Hero() {
       const tl = gsap.timeline({ delay: 0.1 })
 
       // Label reveal
-      tl.fromTo(
-        heroRef.current?.querySelector('.hero-label'),
-        { opacity: 0, y: 16 },
-        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
-      )
+      const heroLabel = heroRef.current?.querySelector('.hero-label')
+      if (heroLabel) {
+        tl.fromTo(
+          heroLabel,
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
+        )
+      }
 
       // Title lines reveal
       const lines = titleRef.current?.querySelectorAll('.line-inner')
@@ -58,25 +61,31 @@ export default function Hero() {
       )
 
       // Stats counter
-      tl.fromTo(
-        statsRef.current?.querySelectorAll('.stat-item'),
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
-        '-=0.4'
-      )
+      const statItems = statsRef.current?.querySelectorAll('.stat-item')
+      if (statItems) {
+        tl.fromTo(
+          statItems,
+          { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
+          '-=0.4'
+        )
+      }
 
       // Parallax on scroll
       if (heroRef.current) {
-        gsap.to(heroRef.current.querySelector('.hero-bg'), {
-          y: '25%',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true,
-          },
-        })
+        const heroBg = heroRef.current.querySelector('.hero-bg')
+        if (heroBg) {
+          gsap.to(heroBg, {
+            y: '25%',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: heroRef.current,
+              start: 'top top',
+              end: 'bottom top',
+              scrub: true,
+            },
+          })
+        }
       }
     }
 

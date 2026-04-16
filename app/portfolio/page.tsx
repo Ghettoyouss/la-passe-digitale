@@ -82,11 +82,13 @@ export default function PortfolioPage() {
     const initGsap = async () => {
       const { gsap } = await import('gsap')
 
-      gsap.fromTo(
-        headerRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 }
-      )
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.1 }
+        )
+      }
     }
     initGsap()
   }, [])

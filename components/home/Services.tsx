@@ -76,20 +76,23 @@ export default function Services() {
         )
       }
 
-      gsap.fromTo(
-        sectionRef.current?.querySelector('.section-header'),
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-          },
-        }
-      )
+      const sectionHeader = sectionRef.current?.querySelector('.section-header')
+      if (sectionHeader) {
+        gsap.fromTo(
+          sectionHeader,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
+            },
+          }
+        )
+      }
     }
     initGsap()
   }, [])

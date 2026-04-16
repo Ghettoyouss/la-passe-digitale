@@ -39,23 +39,29 @@ export default function FAQ() {
       const { ScrollTrigger } = await import('gsap/ScrollTrigger')
       gsap.registerPlugin(ScrollTrigger)
 
-      gsap.fromTo(
-        sectionRef.current?.querySelectorAll('.faq-item'),
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
-        }
-      )
+      const faqItems = sectionRef.current?.querySelectorAll('.faq-item')
+      if (faqItems) {
+        gsap.fromTo(
+          faqItems,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1, y: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
+          }
+        )
+      }
 
-      gsap.fromTo(
-        sectionRef.current?.querySelector('.faq-header'),
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-        }
-      )
+      const faqHeader = sectionRef.current?.querySelector('.faq-header')
+      if (faqHeader) {
+        gsap.fromTo(
+          faqHeader,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+            scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+          }
+        )
+      }
     }
     initGsap()
   }, [])
