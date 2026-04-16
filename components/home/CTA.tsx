@@ -12,11 +12,11 @@ export default function CTA() {
       const { ScrollTrigger } = await import('gsap/ScrollTrigger')
       gsap.registerPlugin(ScrollTrigger)
 
-      const ctaInner = sectionRef.current?.querySelector('.cta-inner')
-      if (!ctaInner) return
+      const target = sectionRef.current?.querySelector('.cta-inner')
+      if (!target) return
 
       gsap.fromTo(
-        ctaInner,
+        target,
         { opacity: 0, y: 50, scale: 0.97 },
         {
           opacity: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out',
