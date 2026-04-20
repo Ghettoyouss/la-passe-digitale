@@ -87,7 +87,6 @@ export default function Navbar() {
           {/* Desktop nav */}
           <ul
             style={{
-              display: 'flex',
               alignItems: 'center',
               gap: '36px',
               listStyle: 'none',
