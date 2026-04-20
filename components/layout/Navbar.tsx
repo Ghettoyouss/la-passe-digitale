@@ -72,7 +72,7 @@ export default function Navbar() {
               alt="La Passe Digitale"
               width={220}
               height={64}
-              style={{ objectFit: 'contain', height: '64px', width: 'auto' }}
+              style={{ objectFit: 'contain', height: '80px', width: 'auto' }}
               priority
             />
           </Link>
