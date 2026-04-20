@@ -119,6 +119,10 @@ export default function Process() {
                 border: '1px solid var(--line)',
                 borderRadius: i === 0 ? '8px 0 0 8px' : i === steps.length - 1 ? '0 8px 8px 0' : '0',
                 position: 'relative',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
               }}
             >
               {/* Accent top line */}

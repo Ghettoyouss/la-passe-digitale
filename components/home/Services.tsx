@@ -107,33 +107,32 @@ export default function Services() {
         {/* Header */}
         <div
           className="section-header"
-          style={{ opacity: 0, marginBottom: '72px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '24px' }}
+          style={{ opacity: 0, marginBottom: '72px', textAlign: 'center' }}
         >
-          <div>
-            <span className="section-label" style={{ display: 'block', marginBottom: '16px' }}>
-              Nos Services
-            </span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 700,
-                fontSize: 'clamp(36px, 4vw, 56px)',
-                lineHeight: '1',
-                letterSpacing: '-0.025em',
-                color: 'var(--text)',
-                maxWidth: '520px',
-              }}
-            >
-              Tout ce dont votre marque a besoin.
-            </h2>
-          </div>
+          <span className="section-label" style={{ display: 'block', marginBottom: '16px' }}>
+            Nos Services
+          </span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontWeight: 700,
+              fontSize: 'clamp(36px, 4vw, 56px)',
+              lineHeight: '1',
+              letterSpacing: '-0.025em',
+              color: 'var(--text)',
+              marginBottom: '16px',
+            }}
+          >
+            Tout ce dont votre marque a besoin.
+          </h2>
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '15px',
               color: 'var(--text-dim)',
               lineHeight: '1.7',
-              maxWidth: '360px',
+              maxWidth: '480px',
+              margin: '0 auto',
             }}
           >
             De la création de votre identité digitale à votre référencement Google, on s'occupe de tout.

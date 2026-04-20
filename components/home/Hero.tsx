@@ -224,16 +224,17 @@ export default function Hero() {
             flexWrap: 'wrap',
             gap: '16px',
             marginBottom: '72px',
+            justifyContent: 'center',
           }}
         >
-          <Link href="/contact" className="btn-primary">
-            Demander un devis
+          <Link href="/contact" className="btn-primary" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center' }}>
+            Devis gratuit
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
-          <Link href="/portfolio" className="btn-outline">
-            Voir nos réalisations
+          <Link href="/portfolio" className="btn-outline" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center' }}>
+            Réalisations
           </Link>
         </div>
 
