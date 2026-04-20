@@ -227,13 +227,13 @@ export default function Hero() {
             justifyContent: 'center',
           }}
         >
-          <Link href="/contact" className="btn-primary" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center' }}>
+          <Link href="/contact" className="btn-primary" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center', whiteSpace: 'nowrap' }}>
             Devis gratuit
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
-          <Link href="/portfolio" className="btn-outline" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center' }}>
+          <Link href="/portfolio" className="btn-outline" style={{ flex: '1 1 0', maxWidth: '220px', justifyContent: 'center', whiteSpace: 'nowrap' }}>
             Réalisations
           </Link>
         </div>

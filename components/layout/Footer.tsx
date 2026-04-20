@@ -40,19 +40,21 @@ export default function Footer() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '48px',
             paddingBottom: '64px',
             borderBottom: '1px solid var(--line)',
+            textAlign: 'center',
           }}
         >
           {/* Brand */}
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link
               href="/"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 textDecoration: 'none',
                 marginBottom: '16px',
               }}
@@ -60,9 +62,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="La Passe Digitale"
-                width={200}
-                height={60}
-                style={{ objectFit: 'contain', height: '60px', width: 'auto' }}
+                width={240}
+                height={72}
+                style={{ objectFit: 'contain', height: '72px', width: 'auto' }}
               />
             </Link>
             <p
@@ -95,9 +97,9 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <p className="section-label" style={{ marginBottom: '20px' }}>Navigation</p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
               {links.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -119,9 +121,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <p className="section-label" style={{ marginBottom: '20px' }}>Services</p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
               {services.map((s) => (
                 <li key={s}>
                   <span
@@ -139,9 +141,9 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <p className="section-label" style={{ marginBottom: '20px' }}>Contactez-nous</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
               <a
                 href="mailto:contact@lapassedigitale.com"
                 className="link-underline"
@@ -169,7 +171,7 @@ export default function Footer() {
             <Link
               href="/contact"
               className="btn-primary"
-              style={{ marginTop: '24px', fontSize: '13px', padding: '11px 20px' }}
+              style={{ marginTop: '24px', fontSize: '13px', padding: '11px 24px', whiteSpace: 'nowrap' }}
             >
               Devis gratuit
               <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
@@ -184,10 +186,11 @@ export default function Footer() {
           style={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             alignItems: 'center',
             gap: '16px',
             paddingTop: '32px',
+            textAlign: 'center',
           }}
         >
           <p
