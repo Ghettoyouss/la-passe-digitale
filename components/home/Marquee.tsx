@@ -6,13 +6,9 @@ export default function Marquee() {
     'Logos & Identité',
     'Flyers & Print',
     'Cartes de Visite',
-    'Sites Vitrines',
-    'E-commerce',
-    'SEO & Référencement',
-    'Logos & Identité',
-    'Flyers & Print',
-    'Cartes de Visite',
   ]
+
+  const doubled = [...items, ...items]
 
   return (
     <div
@@ -27,11 +23,12 @@ export default function Marquee() {
       <div
         style={{
           display: 'flex',
-          animation: 'marquee 28s linear infinite',
+          animation: 'marquee 24s linear infinite',
           whiteSpace: 'nowrap',
+          width: 'max-content',
         }}
       >
-        {items.map((item, i) => (
+        {doubled.map((item, i) => (
           <span
             key={i}
             style={{
@@ -45,6 +42,7 @@ export default function Marquee() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '48px',
+              flexShrink: 0,
             }}
           >
             {item}

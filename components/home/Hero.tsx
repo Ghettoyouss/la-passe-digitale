@@ -240,6 +240,7 @@ export default function Hero() {
         {/* Stats */}
         <div
           ref={statsRef}
+          className="stats-grid"
           style={{
             display: 'flex',
             flexWrap: 'wrap',
