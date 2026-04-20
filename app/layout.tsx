@@ -20,6 +20,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   title: 'La Passe Digitale — Agence Digitale Créative',
   description:
     "Agence digitale créative spécialisée dans la création de sites vitrines, e-commerce, SEO, logos, flyers et cartes de visite. Transformez votre présence digitale.",

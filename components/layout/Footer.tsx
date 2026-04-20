@@ -202,6 +202,17 @@ export default function Footer() {
           >
             © {year} La Passe Digitale. Tous droits réservés.
           </p>
+          <Link
+            href="/mentions-legales"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '13px',
+              color: 'var(--text-muted)',
+              textDecoration: 'none',
+            }}
+          >
+            Mentions légales
+          </Link>
           <p
             style={{
               fontFamily: 'var(--font-body)',
