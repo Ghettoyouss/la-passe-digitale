@@ -17,6 +17,8 @@ export default function ContactPage() {
   const formRef = useRef<HTMLDivElement>(null)
   const [selected, setSelected] = useState<string[]>([])
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,9 +56,23 @@ export default function ContactPage() {
     )
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, services: selected }),
+      })
+      if (!res.ok) throw new Error()
+      setSubmitted(true)
+    } catch {
+      setError('Une erreur est survenue. Veuillez réessayer ou nous appeler directement.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const inputStyle: React.CSSProperties = {
@@ -421,11 +437,16 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button type="submit" className="btn-primary" style={{ alignSelf: 'flex-start', padding: '16px 40px', fontSize: '15px' }}>
-                  Envoyer ma demande
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                {error && (
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--accent)' }}>{error}</p>
+                )}
+                <button type="submit" className="btn-primary" disabled={loading} style={{ alignSelf: 'flex-start', padding: '16px 40px', fontSize: '15px', opacity: loading ? 0.7 : 1 }}>
+                  {loading ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                  {!loading && (
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </button>
               </form>
             )}
