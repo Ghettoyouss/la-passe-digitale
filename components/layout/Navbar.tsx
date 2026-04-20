@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -61,27 +62,19 @@ export default function Navbar() {
           <Link
             href="/"
             style={{
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 700,
-              fontSize: '18px',
-              color: 'var(--text)',
-              textDecoration: 'none',
-              letterSpacing: '-0.02em',
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
+              textDecoration: 'none',
             }}
           >
-            <span
-              style={{
-                display: 'inline-block',
-                width: '8px',
-                height: '8px',
-                borderRadius: '50%',
-                background: 'var(--accent)',
-              }}
+            <Image
+              src="/logo.png"
+              alt="La Passe Digitale"
+              width={160}
+              height={48}
+              style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
+              priority
             />
-            La Passe Digitale
           </Link>
 
           {/* Desktop nav */}

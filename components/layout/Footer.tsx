@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   'Sites vitrines',
@@ -50,28 +51,19 @@ export default function Footer() {
             <Link
               href="/"
               style={{
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 700,
-                fontSize: '20px',
-                color: 'var(--text)',
-                textDecoration: 'none',
-                letterSpacing: '-0.02em',
-                display: 'flex',
+                display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
+                textDecoration: 'none',
                 marginBottom: '16px',
               }}
             >
-              <span
-                style={{
-                  display: 'inline-block',
-                  width: '8px',
-                  height: '8px',
-                  borderRadius: '50%',
-                  background: 'var(--accent)',
-                }}
+              <Image
+                src="/logo.png"
+                alt="La Passe Digitale"
+                width={140}
+                height={42}
+                style={{ objectFit: 'contain', height: '42px', width: 'auto' }}
               />
-              La Passe Digitale
             </Link>
             <p
               style={{
