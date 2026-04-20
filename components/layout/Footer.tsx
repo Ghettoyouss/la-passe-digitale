@@ -60,9 +60,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="La Passe Digitale"
-                width={140}
-                height={42}
-                style={{ objectFit: 'contain', height: '42px', width: 'auto' }}
+                width={200}
+                height={60}
+                style={{ objectFit: 'contain', height: '60px', width: 'auto', mixBlendMode: 'multiply' }}
               />
             </Link>
             <p

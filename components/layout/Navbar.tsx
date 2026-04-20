@@ -70,9 +70,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="La Passe Digitale"
-              width={160}
-              height={48}
-              style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
+              width={220}
+              height={64}
+              style={{ objectFit: 'contain', height: '64px', width: 'auto', mixBlendMode: 'multiply' }}
               priority
             />
           </Link>
