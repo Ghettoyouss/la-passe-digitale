@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'noreply@lapassedigitale.com',
       to: 'contact@lapassedigitale.com',
-      subject: `Nouvelle demande de devis — ${name}`,
+      subject: `Nouvelle demande de devis : ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; border: 1px solid #eee; border-radius: 8px;">
           <h2 style="color: #040037; margin-bottom: 24px;">Nouvelle demande de devis</h2>

@@ -206,18 +206,6 @@ export default function Portfolio() {
                 >
                   {project.category}
                 </span>
-                <span
-                  style={{
-                    position: 'absolute',
-                    top: '16px',
-                    right: '16px',
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '12px',
-                    color: 'rgba(248,249,250,0.6)',
-                  }}
-                >
-                  {project.year}
-                </span>
               </div>
 
               {/* Content */}

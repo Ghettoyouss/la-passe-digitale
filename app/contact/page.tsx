@@ -112,7 +112,7 @@ export default function ContactPage() {
           }}
           className="contact-grid"
         >
-          {/* Left — info */}
+          {/* Left : info */}
           <div ref={headerRef} style={{ opacity: 0, position: 'sticky', top: '100px' }}>
             <span className="section-label" style={{ display: 'block', marginBottom: '16px' }}>
               Contact
@@ -249,7 +249,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right : form */}
           <div ref={formRef} style={{ opacity: 0 }}>
             {submitted ? (
               <div

@@ -117,7 +117,7 @@ export default function FAQ() {
               Une autre question ? Contactez-nous directement au{' '}
               <a
                 href="tel:0787135144"
-                style={{ color: 'var(--accent)', textDecoration: 'none' }}
+                style={{ color: 'var(--accent)', textDecoration: 'none', whiteSpace: 'nowrap' }}
               >
                 07 87 13 51 44
               </a>

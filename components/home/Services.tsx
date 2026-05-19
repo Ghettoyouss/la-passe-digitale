@@ -14,7 +14,7 @@ const services = [
     num: '02',
     title: 'E-commerce',
     short: 'Boutiques en ligne',
-    desc: "Des boutiques en ligne performantes et optimisées pour la conversion. Interface intuitive, paiement sécurisé, gestion des stocks — tout pour vendre efficacement.",
+    desc: "Des boutiques en ligne performantes et optimisées pour la conversion. Interface intuitive, paiement sécurisé, gestion des stocks, tout pour vendre efficacement.",
     tags: ['Shopify', 'WooCommerce', 'Sur mesure'],
   },
   {
@@ -28,7 +28,7 @@ const services = [
     num: '04',
     title: 'Création de Logos',
     short: 'Identité visuelle',
-    desc: "Une identité visuelle unique et mémorable qui vous distingue de la concurrence. Logo, charte graphique, déclinaisons — votre marque prend vie.",
+    desc: "Une identité visuelle unique et mémorable qui vous distingue de la concurrence. Logo, charte graphique, déclinaisons : votre marque prend vie.",
     tags: ['Branding', 'Charte graphique', 'Fichiers HD'],
   },
   {
@@ -42,7 +42,7 @@ const services = [
     num: '06',
     title: 'Cartes de Visite',
     short: 'Premier contact',
-    desc: "Des cartes de visite qui laissent une impression durable. Design professionnel, formats originaux, papiers premium — donnez envie qu'on vous rappelle.",
+    desc: "Des cartes de visite qui laissent une impression durable. Design professionnel, formats originaux, papiers premium : donnez envie qu'on vous rappelle.",
     tags: ['Design pro', 'Formats variés', 'Impression'],
   },
 ]
@@ -200,7 +200,7 @@ export default function Services() {
                   </span>
                 </div>
 
-                {/* Tags — toujours visibles */}
+                {/* Tags toujours visibles */}
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '6px' }}>
                   {service.tags.map((tag) => (
                     <span
@@ -225,9 +225,10 @@ export default function Services() {
 
                 {/* Description revealed on hover */}
                 <div
+                  className="service-desc"
                   style={{
                     overflow: 'hidden',
-                    maxHeight: activeIndex === i ? '60px' : '0',
+                    maxHeight: activeIndex === i ? '200px' : '0',
                     transition: 'max-height 0.4s ease',
                   }}
                 >
@@ -248,6 +249,7 @@ export default function Services() {
 
               {/* Arrow */}
               <div
+                className="service-arrow"
                 style={{
                   width: '44px',
                   height: '44px',
@@ -271,6 +273,23 @@ export default function Services() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .service-item {
+            grid-template-columns: 40px 1fr !important;
+            gap: 16px !important;
+            padding: 24px 0 !important;
+          }
+          .service-arrow {
+            display: none !important;
+          }
+          .service-desc {
+            max-height: none !important;
+            overflow: visible !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

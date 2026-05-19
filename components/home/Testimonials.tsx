@@ -70,7 +70,7 @@ export default function Testimonials() {
           }}
           className="testimonials-grid"
         >
-          {/* Left — label & quote display */}
+          {/* Left : label & quote display */}
           <div>
             <span className="section-label" style={{ display: 'block', marginBottom: '16px' }}>
               Témoignages
@@ -149,7 +149,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Right — selector cards */}
+          {/* Right : selector cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {testimonials.map((t, i) => (
               <button

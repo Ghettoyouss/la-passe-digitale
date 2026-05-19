@@ -254,7 +254,7 @@ export default function Hero() {
             { value: '50+', label: 'Projets réalisés' },
             { value: '3 ans', label: "d'expérience" },
             { value: '98%', label: 'Clients satisfaits' },
-            { value: '72h', label: 'Délai moyen de réponse' },
+            { value: '24h', label: 'Délai moyen de réponse' },
           ].map((stat, i) => (
             <div
               key={i}
@@ -295,39 +295,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '32px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '8px',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '11px',
-            letterSpacing: '3px',
-            textTransform: 'uppercase',
-            color: 'var(--text-muted)',
-          }}
-        >
-          Scroll
-        </span>
-        <div
-          style={{
-            width: '1px',
-            height: '40px',
-            background: 'linear-gradient(to bottom, rgba(248,249,250,0.4), transparent)',
-            animation: 'pulse 2s infinite',
-          }}
-        />
-      </div>
     </section>
   )
 }

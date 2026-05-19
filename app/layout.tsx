@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     icon: '/favicon.png',
     apple: '/favicon.png',
   },
-  title: 'La Passe Digitale — Agence Digitale Créative',
+  title: 'La Passe Digitale | Agence Digitale Créative',
   description:
     "Agence digitale créative spécialisée dans la création de sites vitrines, e-commerce, SEO, logos, flyers et cartes de visite. Transformez votre présence digitale.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     'carte de visite',
   ],
   openGraph: {
-    title: 'La Passe Digitale — Agence Digitale Créative',
+    title: 'La Passe Digitale | Agence Digitale Créative',
     description: 'On propulse votre marque dans l\'ère digitale.',
     type: 'website',
     locale: 'fr_FR',
